@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<main>
+    <section class="main">
+        <div class="container">
+            <div class="panel">
+                <div class="panel__container">
+                    <div class="search --source">
+                        <a class="search__icon" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                                <path d="M9.5 0C4.71175 0 0.830078 3.71288 0.830078 8.29297C0.830078 9.82467 1.14351 11.4067 2.04296 12.5469L9.5 22L16.957 12.5469C17.774 11.5112 18.1699 9.68035 18.1699 8.29297C18.1699 3.71288 14.2883 0 9.5 0ZM9.5 4.80309C11.5147 4.80309 13.1485 6.36585 13.1485 8.29295C13.1485 10.2201 11.5147 11.7828 9.5 11.7828C7.48528 11.7828 5.85151 10.2201 5.85151 8.29297C5.85151 6.36585 7.48528 4.80309 9.5 4.80309Z" fill="blue"/>
+                            </svg>
+                        </a>
+                        
+                        <div class="autocomplete">
+                            <input class="search__input" type="text" placeholder="Nhập địa chỉ cần tìm">
+                        </div>
+                    </div>
+                    <div class="search --dest">
+                        <a class="search__icon" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="22" viewBox="0 0 19 22" fill="none">
+                                <path d="M9.5 0C4.71175 0 0.830078 3.71288 0.830078 8.29297C0.830078 9.82467 1.14351 11.4067 2.04296 12.5469L9.5 22L16.957 12.5469C17.774 11.5112 18.1699 9.68035 18.1699 8.29297C18.1699 3.71288 14.2883 0 9.5 0ZM9.5 4.80309C11.5147 4.80309 13.1485 6.36585 13.1485 8.29295C13.1485 10.2201 11.5147 11.7828 9.5 11.7828C7.48528 11.7828 5.85151 10.2201 5.85151 8.29297C5.85151 6.36585 7.48528 4.80309 9.5 4.80309Z" fill="#F24E1E"/>
+                            </svg>
+                        </a>
+                        
+                        <div class="autocomplete">
+                            <input class="search__input" type="text" placeholder="Nhập địa chỉ cần tìm">
+                        </div>
+                    </div>
+                    <button type="button" class="go-btn">Đi</button>
+                </div>
+            </div>
+            <div class="map" id="map"></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
