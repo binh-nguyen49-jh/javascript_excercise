@@ -32,9 +32,37 @@
     padding: 20px;
 
     display: grid;
-    grid-template-rows: 50px 50px 25px;
+    grid-template-rows: 30px 50px 50px 25px;
     gap: 20px;
     height: 100%;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+
+}
+
+.tabs .control {
+    cursor: pointer;
+}
+
+.tabs .control .control-icon svg{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.tabs .control:hover .control-icon svg{
+    fill: rgb(0, 30, 255);
+}
+
+.tabs .control input {
+    display: none;
+}
+
+input[name='matching-type']:checked ~ .control-icon svg{
+    fill: rgb(0, 30, 255);
 }
 
 .go-btn {

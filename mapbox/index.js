@@ -123,12 +123,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const goButton = document.querySelector('.go-btn');
     goButton.onclick = async () => {
+        const type = document.querySelector(".panel__container input[name='matching-type']:checked").value;
         const sourceCoordinate = sourceLocationSearch.getCurrentCoordinates();
         const targetCoordinate = targetLocationSearch.getCurrentCoordinates();
         
         if(sourceCoordinate && targetCoordinate) {
             try { 
-                const coordinates = await MapboxAPI.getPathAPI([sourceCoordinate, targetCoordinate]);
+                const coordinates = await MapboxAPI.getPathAPI([sourceCoordinate, targetCoordinate], type);
                 if (coordinates) {
                     MapboxAPI.addRouteToMap(map, coordinates);
                 }   
