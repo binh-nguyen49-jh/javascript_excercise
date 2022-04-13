@@ -1,0 +1,26 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+               "type": "Point",
+               "coordinates": [106.7834812, 10.8416345]
+            },
+            "properties": {
+                "name": "Nhà thờ Đức Bà",
+                "images": [
+                    "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/3/1/787823/89Ed9078d6332d6d7422.jpg",
+                    "https://image.thanhnien.vn/1200x630/Uploaded/2022/cqjwqcqdh/2020_05_23/4_xshh.jpg",
+                    "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/3/1/787823/89Ed9078d6332d6d7422.jpg",
+                    "https://image.thanhnien.vn/1200x630/Uploaded/2022/cqjwqcqdh/2020_05_23/4_xshh.jpg",
+                    "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/3/1/787823/89Ed9078d6332d6d7422.jpg",
+                    "https://image.thanhnien.vn/1200x630/Uploaded/2022/cqjwqcqdh/2020_05_23/4_xshh.jpg",
+                    "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/3/1/787823/89Ed9078d6332d6d7422.jpg",
+                    "https://image.thanhnien.vn/1200x630/Uploaded/2022/cqjwqcqdh/2020_05_23/4_xshh.jpg"
+                ]
+            }
+        }   
+    ]
+}
+    

@@ -14,7 +14,7 @@ export const LocationPopup = (locationData) => {
                         <h4>Ảnh</h4>
                         <div class="images__container">
                             <ul>
-                                ${locationData.images.map((imgURL) => `
+                                ${locationData.images?.map((imgURL) => `
                                     <li style="
                                         background-image: url('${imgURL}')
                                     ">
@@ -43,7 +43,7 @@ export const LocationList = (places)  => {
     `).join('');
 }
 
-export function LocationSearchComponenent({
+export function LocationSearchComponent({
     locationSearchButton, 
     locationSearchInput, 
     locationContainer

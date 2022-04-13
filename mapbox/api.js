@@ -21,6 +21,23 @@ export default class MapboxAPI {
         }
     }
     
+    static reverseGeocoding = async (longitude, latitude, type='mapbox.places') => {
+        try {
+            const response = await fetch(`${API_URL}/geocoding/v5/${type}/${longitude},${latitude}.json?access_token=${MapboxAPI.API_ACCESS_TOKEN}`);
+            const locationRes = await response.json();
+            if (
+                !locationRes ||
+                !locationRes ||
+                !locationRes.features ||
+                !locationRes.features.length
+            ) {
+                throw new Error('Failed to fetch resource');
+            }
+            return locationRes;
+        } catch (error) {
+            console.error(error);
+        }
+    }
     static getPathAPI = async (coordinates, type='driving') => {
         try {
             const response = await fetch(`${API_URL}/optimized-trips/v1/mapbox/${type}/${coordinates.map(coor => coor.join(',')).join(';')}?access_token=${MapboxAPI.API_ACCESS_TOKEN}&geometries=geojson`);
@@ -50,6 +67,7 @@ export default class MapboxAPI {
             className: 'modal'
         }).setHTML(PopupHTML(markerData))) // add popup
         .addTo(map);
+        return marker;
     }
 
     static addRouteToMap(map, coordinates) {

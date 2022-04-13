@@ -3,9 +3,9 @@
 
 // for each element -> delete duplicate elements after it.
 // Time complexity: O(n^3)
-// Aulixity space: O(1)
+// Auxiliary space: O(1)
 function naiveApproach(arr) {
-  let newArr = [...arr]
+  const newArr = [...arr];
   for (let i = 0; i < newArr.length - 1; i ++) { // O(n)
     for (let j = i + 1; j < newArr.length; j++) { // O(n)
       if (newArr[i] === newArr[j]) {
@@ -64,4 +64,4 @@ function mapApproach2(arr) {
 console.log(naiveApproach([1,2,2,3,4,4,4,5,6]))
 console.log(naiveApproach2([1,2,2,3,4,4,4,5,6]))
 console.log(mapApproach([1,2,2,3,4,4,4,5,6]))
-console.log(mapApproach2([1,2,2,3,4,4,4,5,6]))
+console.log(mapApproach2([6, 1,2,2,3,4,4,4,5]))

@@ -28,6 +28,10 @@
     z-index: 2;
 }
 
+.panel.close {
+    left: -100%;
+}
+
 .panel .panel__container {
     padding: 20px;
 
@@ -35,6 +39,19 @@
     grid-template-rows: 30px 50px 50px 25px;
     gap: 20px;
     height: 100%;
+}
+
+.close-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    cursor: pointer;
+}
+
+.close-panel svg {
+    width: 18px;
+    height: 18px;
 }
 
 .tabs {
@@ -142,7 +159,7 @@ input[name='matching-type']:checked ~ .control-icon svg{
 
     background-color: white;
 
-    z-index: 3;
+    z-index: 5;
 }
 
 
@@ -178,6 +195,8 @@ input[name='matching-type']:checked ~ .control-icon svg{
 .modal__body h3 {
     align-self: flex-start;
     font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
 }
 
 .modal__body .modal__images {
@@ -303,4 +322,43 @@ input[type=submit] {
     /*when navigating through the items using the arrow keys:*/
     background-color: DodgerBlue !important;
     color: #ffffff;
+}
+
+.current-loc {
+    position:fixed;
+    right: 50px;
+    bottom: 50px;
+ 
+}
+.map-btn, .cur-loc {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fffff4;
+    cursor: pointer;
+}
+
+.map-btn svg, .cur-loc svg {
+    width: 24px;
+    height: 24px;
+}
+
+.open-panel {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    z-index: 3;
+}
+
+.open-panel.show {
+    display: flex;
 }
