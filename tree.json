@@ -1,0 +1,55 @@
+{
+    "name": "Decision Node Flowchart for determining whether we should do something or not",
+    "nodes" : {
+        "1": {
+            "body": "Do you want to do this?",
+            "type": "binary",
+            "answers": [
+                {
+                    "body": "YES",
+                    "next_node": 2
+                },
+                {
+                    "body": "NO",
+                    "next_node": 5
+                }
+            ]
+        },
+        "2": {
+            "body": "Will it likely end in disaster?",
+            "type": "binary",
+            "answers": [
+                {
+                    "body": "YES",
+                    "next_node": 3
+                },
+                {
+                    "body": "NO",
+                    "next_node": 4
+                }
+            ]
+        },
+        "3": {
+            "body": "Will it make a good story anyway?",
+            "type": "binary",
+            "answers": [
+                {
+                    "body": "YES",
+                    "next_node": 4
+                },
+                {
+                    "body": "NO",
+                    "next_node": 5
+                }
+            ]
+        },
+        "4": {
+            "body": "Do It",
+            "type": "target"
+        },
+        "5": {
+            "body": "Don't Do It",
+            "type": "target"
+        }
+    }
+}
