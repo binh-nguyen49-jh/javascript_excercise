@@ -3,5 +3,5 @@ function isValidPassword(password) {
   return passRegex.test(password);
 }
 
-console.assert(isValidPassword("binh.Nguyen@journ3yh.io") === true)
-console.assert(isValidPassword("binh.nguyen@journeyh.ffeo") === false)
+console.log(isValidPassword("binh.Nguyen@journ3yh.io"))
+console.log(isValidPassword("binh.nguyen@journeyh.ffeo"))
